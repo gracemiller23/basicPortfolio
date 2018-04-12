@@ -74,15 +74,24 @@ header::after{
     clear:both;
 }
 
-header div {
+.name {
     background-color:#4aaaa5;
     width:25%;
     height: 80px;
     margin:0;
+    padding:0;
     display:block;
     float:left;
     position:relative;
-    left: 60px;
+    left: 0;
+}
+
+.headwrap {
+    max-width:960px;
+    height:80px;
+    margin: 0 auto;
+    padding:0;
+
 }
 
 nav {
@@ -102,6 +111,15 @@ nav a {
     padding-left: 3%;
     padding-right: 3%;
 }
+/*
+nav li::after {
+    content:"|";
+}
+
+nav li::lastchild {
+    content:"";
+}
+*/
 
 /* General Body Styling */
 
