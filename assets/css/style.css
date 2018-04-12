@@ -1,4 +1,10 @@
 
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+     box-sizing: border-box;
+}
+
 html, body {
     height:100%;
 }
@@ -87,39 +93,67 @@ header::after{
 }
 
 .headwrap {
-    max-width:960px;
+    width:960px !important;
     height:80px;
     margin: 0 auto;
     padding:0;
 
 }
 
+.headwrap:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+
+/* ------ Navigation -------- */
 nav {
     position:relative;
-    right:50px;
+    width:20%;
+    float:right;
+    /*temporary fix for float issue
+    text-align:right;*/
+   
 }
+
+nav li {
+    display:inline-block;
+    margin: 0;
+    padding-top: 31px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+
 
 nav a {
-    display:block;
-    float: right;
     margin: 0;
     font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-    font-size: 18px;
+    font-size: 15px;
     text-decoration:none;
     color:#777777;
-    padding-top: 31px;
-    padding-left: 3%;
-    padding-right: 3%;
-}
-/*
-nav li::after {
-    content:"|";
+    padding:0;
 }
 
-nav li::lastchild {
+nav li:last-child {
+    padding-right:0;
+}
+
+/*
+nav li::before {
+    content:"|";
+    font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 15px;
+    text-decoration:none;
+    color:#777777;
+}
+
+nav li:last-child::before{
     content:"";
 }
 */
+
+
 
 /* General Body Styling */
 
@@ -219,6 +253,10 @@ label {
     z-index:200;
     float:left;
     display:block;
+}
+
+.portfolioLabel:hover {
+    opacity: .75;
 }
 
 
